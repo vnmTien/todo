@@ -19,7 +19,7 @@ const ToDo = () => {
 
   const TitleJobs = ["All", "Active", "Completed"]
 
-  const handleAddJob = () => {
+  const handleAddJob = (e) => {
     if (inputRef.current.value === '') return;
     const newJob = {
       id: job.length + 1,
@@ -29,14 +29,14 @@ const ToDo = () => {
 
     setActiveJobs(prev => {
 
-      const saveJobs = [...prev, newJob]
+      const savenewJobs = [...prev, newJob]
 
-      const jsonJobs = JSON.stringify(saveJobs)
-      localStorage.setItem('jobs', jsonJobs)
+      const jsonActiveJobs = JSON.stringify(savenewJobs)
+      localStorage.setItem('activeJobs', jsonActiveJobs)
 
-      console.log(jsonJobs)
+      // console.log(jsonJobs)
 
-      return saveJobs
+      return savenewJobs
     });
 
     setJob(prev => {
