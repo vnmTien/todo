@@ -102,8 +102,8 @@ const ToDo = () => {
             </div>
             <button className='add-btn' onClick={handleAddJob}>Add</button>
           </div>
-          {renderTitle === 'All' && job?.map((item, index) => { return <All key={index} item={item} checkJob={checkJob} /> })}
-          {renderTitle === 'Active' && activeJobs?.map((item, index) => { return <All key={index} item={item} checkJob={checkJob} /> })}
+          {renderTitle === 'All' && job?.map((item, index) => { return (<All key={index} item={item} checkJob={checkJob} />) })}
+          {renderTitle === 'Active' && activeJobs?.map((item, index) => { return (<All key={index} item={item} checkJob={checkJob} />) })}
           {renderTitle === 'Completed' && completedJobs?.map((item, index) => { return (<Complete key={index} item={item} checkJob={checkJob} deleteJob={handleDeleteJob} />) })}
           {renderTitle === 'Completed' && <button className='delete-btn' onClick={handleDeleteAllJobs}>Delete All</button>}
         </div>
