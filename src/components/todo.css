@@ -1,17 +1,76 @@
 .container {
+    text-align: center;
+}
+.task-status-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.task-status-display .task-status-item {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.active-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .active-container .active-tasks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 35%;
+  }
+  .active-container .active-tasks .task-action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    background: #fff;
-    padding: 30px;
+  }
+  .active-container .active-tasks .task-action .task-input {
+    width: 75%;
+    border: 1px solid black;
+    padding: 10px;
     border-radius: 10px;
-    margin: 50px auto;
-    font-family: 'Roboto', sans-serif;
-    transition: 0.6s ease-out;
-}
-
-.container h1 {
-    text-align:  center;
-}
-
-.tag-container {
+  }
+  .active-container .active-tasks .task-action .task-input input {
+    border: hidden;
     width: 100%;
-}
+  }
+  .active-container .active-tasks .task-action .add-btn {
+    padding: 10px;
+    border-radius: 10px;
+    width: 15%;
+    background: #0ac2ec;
+    color: white;
+  }
+  .active-container .active-tasks .task-list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .active-container .active-tasks .task-list .task-item {
+    width: 100%;
+  }
+  .active-container .active-tasks .task-list .task-item .list-container {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+  }
+  .active-container .active-tasks .task-list .task-item .list-container .task-checkbox {
+    height: 30px;
+    width: 30px;
+  }
+  .active-container .active-tasks .task-list .task-item .list-container .task-text {
+    padding-left: 10px;
+  }
+  .active-container .active-tasks .delete-btn {
+    margin-top: 25px;
+  }
+  
