@@ -27,6 +27,18 @@ const ToDo = () => {
       isChecked: false
     };
 
+    setActiveJobs(prev => {
+
+      const saveJobs = [...prev, newJob]
+
+      const jsonJobs = JSON.stringify(saveJobs)
+      localStorage.setItem('jobs', jsonJobs)
+
+      console.log(jsonJobs)
+
+      return saveJobs
+    });
+
     setJob(prev => {
 
       const saveJobs = [...prev, newJob]
